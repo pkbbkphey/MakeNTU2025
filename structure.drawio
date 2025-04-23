@@ -4,17 +4,62 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-14" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shape=link;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-4" target="6xTB0geZAMP3oWDiHn3o-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shape=link;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-4" target="6xTB0geZAMP3oWDiHn3o-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="6xTB0geZAMP3oWDiHn3o-4" value="RPI" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="60" y="130" width="120" height="60" as="geometry" />
+          <mxGeometry x="150" y="180" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6xTB0geZAMP3oWDiHn3o-5" value="手機" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="130" width="120" height="60" as="geometry" />
+          <mxGeometry x="570" y="420" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6xTB0geZAMP3oWDiHn3o-6" value="基站1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="130" width="120" height="60" as="geometry" />
+          <mxGeometry x="360" y="180" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6xTB0geZAMP3oWDiHn3o-7" value="基站2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="130" width="120" height="60" as="geometry" />
+          <mxGeometry x="360" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-9" value="" style="endArrow=none;dashed=1;html=1;rounded=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-7" target="6xTB0geZAMP3oWDiHn3o-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="370" as="sourcePoint" />
+            <mxPoint x="420" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-19" value="2.4GHz&lt;div&gt;data link&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" vertex="1" connectable="0" parent="6xTB0geZAMP3oWDiHn3o-9">
+          <mxGeometry x="0.1" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-10" value="" style="endArrow=none;dashed=1;html=1;rounded=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-4" target="6xTB0geZAMP3oWDiHn3o-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="370" as="sourcePoint" />
+            <mxPoint x="420" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-17" value="LAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" vertex="1" connectable="0" parent="6xTB0geZAMP3oWDiHn3o-10">
+          <mxGeometry x="-0.0146" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-11" value="" style="endArrow=none;dashed=1;html=1;rounded=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-7" target="6xTB0geZAMP3oWDiHn3o-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="370" as="sourcePoint" />
+            <mxPoint x="420" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-18" value="LAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" vertex="1" connectable="0" parent="6xTB0geZAMP3oWDiHn3o-11">
+          <mxGeometry x="-0.059" y="-1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-12" value="ODrive" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-13" value="Arduino nano" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
