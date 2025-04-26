@@ -4,3 +4,11 @@
 # Inspirations
 - [I made an AUTONOMOUS BICYCLE!](https://youtu.be/kCL2d7wZjU8?si=Q5lIrZy4WpomS9-h) </br>
 - [What is the Difference Between Reaction Wheels and Gyroscopes?](https://youtu.be/pJfMFUcquWM?si=ixDk5-67yfu8ZrVs)
+
+# Ideas
+- focus on rainy days convenicence:
+> - Self-balancing with an umbrella holder
+> - auto lock/unlock bicycle, so that user do not need to unlock with one hand while holding umbrella
+> - allow users to ride bicycle with both hands, make it more secure
+> - bicycle head can prevent from overturn and slipping
+> - accessibility for stability, direction, and brake
