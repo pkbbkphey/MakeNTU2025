@@ -28,8 +28,25 @@ odrv0.axis0.encoder.config.use_index = False                  // For absolute en
 odrv0.axis0.config.startup_encoder_index_search = True
 ```
 
+### Tuning:
+[Tuning method](https://docs.odriverobotics.com/v/0.5.6/control.html#control-doc)
+#### Original:
+```
+odrv0.axis0.controller.config.pos_gain = 20.0
+odrv0.axis0.controller.config.vel_gain = 0.1666666716337204
+odrv0.axis0.controller.config.vel_integrator_gain = 0.3333333432674408
+```
+#### Tuned for 9020 BLDC motor @Vin = 15V:
+```
+odrv0.axis0.controller.config.pos_gain = 150
+odrv0.axis0.controller.config.vel_gain = 0.24
+odrv0.axis0.controller.config.vel_integrator_gain = 1    // 0.5 * bandwidth * vel_gain, bandwidth = 1/100ms
+```
+
+### Some config to be explored:
+```
 //odrv0.axis0.motor.config.resistance_calib_max_voltage = 4
 //odrv0.axis0.motor.config.requested_current_range = 25
 //odrv0.axis0.motor.config.current_control_bandwidth = 100
-
+```
 
