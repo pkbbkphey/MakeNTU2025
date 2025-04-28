@@ -5,6 +5,31 @@ odrv0.save_configuration()
 odrv0.reboot()
 ```
 
+# debug:
+```
+dump_errors(odrv0)
+odrv0.clear_errors()
+```
+
+# 常用狀態：
+```
+odrv0.axis0.requested_state = AXIS_STATE_IDLE
+odrv0.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
+```
+
+# 控制方式：
+### 位置：
+```
+odrv0.axis0.controller.config.control_mode = CONTROL_MODE_POSITION_CONTROL
+odrv0.axis0.controller.input_pos = 0          // 指定位置，單位round
+```
+
+### 速度：
+```
+odrv0.axis0.controller.config.control_mode = CONTROL_MODE_VELOCITY_CONTROL
+odrv0.axis0.controller.input_vel = 0          // 指定轉速，單位rps
+```
+
 # axis0:
 ### 安全：
 ```
