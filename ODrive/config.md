@@ -1,3 +1,10 @@
+# saving configuration:
+```
+odrv0.axis0.requested_state = AXIS_STATE_IDLE
+odrv0.save_configuration()
+odrv0.reboot()
+```
+
 # axis0:
 ### 安全：
 ```
