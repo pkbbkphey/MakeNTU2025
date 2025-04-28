@@ -30,6 +30,14 @@ odrv0.axis0.controller.config.control_mode = CONTROL_MODE_VELOCITY_CONTROL
 odrv0.axis0.controller.input_vel = 0          // 指定轉速，單位rps
 ```
 
+### 啟動程序：
+```
+odrv0.axis0.config.startup_motor_calibration
+odrv0.axis0.config.startup_encoder_index_search
+odrv0.axis0.config.startup_encoder_offset_calibration
+odrv0.axis0.config.startup_closed_loop_control
+```
+
 # axis0:
 ### 安全：
 ```
@@ -75,7 +83,15 @@ odrv0.axis0.controller.config.vel_gain = 0.24
 odrv0.axis0.controller.config.vel_integrator_gain = 1    // 0.5 * bandwidth * vel_gain, bandwidth = 1/100ms
 ```
 
-### Some config to be explored:
+# 通訊(UART)
+[UART](https://docs.odriverobotics.com/v/0.5.6/uart.html)
+```
+odrv0.config.uart_a_baudrate = 115200
+odrv0.config.enable_uart_a = True
+odrv0.config.uart0_protocol = STREAM_PROTOCOL_TYPE_ASCII_AND_STDOUT
+```
+
+# Some config to be explored:
 ```
 //odrv0.axis0.motor.config.resistance_calib_max_voltage = 4
 //odrv0.axis0.motor.config.requested_current_range = 25
