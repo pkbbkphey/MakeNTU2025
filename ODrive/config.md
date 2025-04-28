@@ -20,11 +20,13 @@ odrv0.axis0.motor.config.motor_type = MOTOR_TYPE_HIGH_CURRENT
 ```
 
 ### 編碼器：
-
-odrv0.axis0.encoder.config.abs_spi_cs_gpio_pin = 4  # or which ever GPIO pin you choose
-odrv0.axis0.encoder.config.mode = ENCODER_MODE_SPI_ABS_CUI   # or ENCODER_MODE_SPI_ABS_AMS
+```
+odrv0.axis0.encoder.config.abs_spi_cs_gpio_pin = 5            // 5 to 8 recommended
+odrv0.axis0.encoder.config.mode = ENCODER_MODE_SPI_ABS_CUI    // or ENCODER_MODE_SPI_ABS_AMS
 odrv0.axis0.encoder.config.cpr = 2**14
-
+odrv0.axis0.encoder.config.use_index = False                  // For absolute encoder, like AS5047P in this case, there is no need to use index
+odrv0.axis0.config.startup_encoder_index_search = True
+```
 
 //odrv0.axis0.motor.config.resistance_calib_max_voltage = 4
 //odrv0.axis0.motor.config.requested_current_range = 25
