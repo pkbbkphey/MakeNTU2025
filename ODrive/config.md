@@ -32,10 +32,17 @@ odrv0.axis0.controller.input_vel = 0          // 指定轉速，單位rps
 
 ### 啟動程序：
 ```
-odrv0.axis0.config.startup_motor_calibration
-odrv0.axis0.config.startup_encoder_index_search
-odrv0.axis0.config.startup_encoder_offset_calibration
-odrv0.axis0.config.startup_closed_loop_control
+odrv0.axis0.config.startup_motor_calibration = False            // 重新接UVW線才要重新執行
+  - odrv0.axis0.motor.config.pre_calibrated = True              // 常態設定(不要動)
+  - odrv0.axis0.requested_state = AXIS_STATE_MOTOR_CALIBRATION  // 校正方式
+
+odrv0.axis0.config.startup_encoder_index_search = False         // 絕對編碼器不須要index
+
+odrv0.axis0.config.startup_encoder_offset_calibration = True    // 重新安裝編碼器才需要執行
+  - odrv0.axis0.encoder.config.pre_calibrated = True            // 常態設定(不要動)
+  - odrv0.axis0.requested_state = AXIS_STATE_ENCODER_OFFSET_CALIBRATION  // 校正方式
+
+odrv0.axis0.config.startup_closed_loop_control = True
 ```
 
 # axis0:
