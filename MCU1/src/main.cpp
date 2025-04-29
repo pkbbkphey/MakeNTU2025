@@ -1,5 +1,6 @@
 
 #include "ODriveArduino.h"
+#define DBG
 
 #include <Arduino.h>
 #include <SoftwareSerial.h>
@@ -31,8 +32,10 @@ void setup()
     // ODrive uses 115200 baud
     odrive_serial.begin(115200);
 
+    #ifdef DBG
     // Serial to PC
     Serial.begin(115200);
+    #endif
 
     for (int axis = 0; axis < 2; ++axis)
     {
@@ -46,10 +49,5 @@ void loop()
 {
     delay(1000);
     odrive_serial << "v 0 1\n";
-    delay(1000);
-    odrive_serial << "v 0 3\n";
-    delay(1000);
-    odrive_serial << "v 0 5\n";
-    delay(1000);
-    odrive_serial << "v 0 3\n";
+
 }
