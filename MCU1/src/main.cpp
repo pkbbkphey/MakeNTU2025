@@ -1,7 +1,6 @@
 
 #include <Arduino.h>
 
-const bool DBG = 1;
 #include "odrive.h"
 #include "imu.h"
 #include "balance_controller.h"
@@ -12,11 +11,11 @@ balance_controller controller1;
 
 void setup()
 {
-    if(DBG)
     Serial.begin(115200);
 
     odrv.initialize();
     imu.initialize();
+    // imu.calibrate();     // This only needs to be done once for each MPU6050 unit
 }
 
 void loop()

@@ -20,7 +20,7 @@ float balance_controller::balance_control(const float angle_roll, unsigned long 
 
         // PD Control
         vel_out = Kp * error + Kd * d_error;
-        Serial.println(vel_out);
+        // Serial.println(vel_out);
 
         // Update stored values
         last_angle = angle_roll;

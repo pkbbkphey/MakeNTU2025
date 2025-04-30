@@ -8,6 +8,7 @@ class MPU6050
         MPU6050();
         ~MPU6050();
         void initialize();
+        void calibrate();
         void update();
         int gyro_x, gyro_y, gyro_z;
         long acc_x, acc_y, acc_z, acc_total_vector;

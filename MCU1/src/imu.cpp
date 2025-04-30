@@ -3,6 +3,7 @@
 // http://www.brokking.net/imu.html
 
 #include <Wire.h>
+#include <EEPROM.h>
 #include <Arduino.h>
 #include "imu.h"
 
@@ -19,6 +20,13 @@ void MPU6050::initialize()
 
     setup_mpu_6050_registers(); // Setup the registers of the MPU-6050 (500dfs / +/-8g) and start the gyro
 
+    gyro_x_cal = (EEPROM.read(3) << 24) | (EEPROM.read(2) << 16) | (EEPROM.read(1) << 8) | EEPROM.read(0);
+    gyro_y_cal = (EEPROM.read(7) << 24) | (EEPROM.read(6) << 16) | (EEPROM.read(5) << 8) | EEPROM.read(4);
+    gyro_z_cal = (EEPROM.read(11) << 24) | (EEPROM.read(10) << 16) | (EEPROM.read(9) << 8) | EEPROM.read(8);
+}
+
+void MPU6050::calibrate()
+{
     digitalWrite(LED_BUILTIN, HIGH);
 
     delay(1500);
@@ -37,8 +45,23 @@ void MPU6050::initialize()
     gyro_y_cal /= 2000;
     gyro_z_cal /= 2000;
 
-    digitalWrite(LED_BUILTIN, LOW);
+    EEPROM.write(0, gyro_x_cal & 0x000000FF);
+    EEPROM.write(1, (gyro_x_cal >> 8) & 0x000000FF);
+    EEPROM.write(2, (gyro_x_cal >> 16) & 0x000000FF);
+    EEPROM.write(3, (gyro_x_cal >> 24) & 0x000000FF);
 
+    EEPROM.write(4, gyro_y_cal & 0x000000FF);
+    EEPROM.write(5, (gyro_y_cal >> 8) & 0x000000FF);
+    EEPROM.write(6, (gyro_y_cal >> 16) & 0x000000FF);
+    EEPROM.write(7, (gyro_y_cal >> 24) & 0x000000FF);
+
+    EEPROM.write(8, gyro_z_cal & 0x000000FF);
+    EEPROM.write(9, (gyro_z_cal >> 8) & 0x000000FF);
+    EEPROM.write(10, (gyro_z_cal >> 16) & 0x000000FF);
+    EEPROM.write(11, (gyro_z_cal >> 24) & 0x000000FF);
+
+    digitalWrite(LED_BUILTIN, LOW);
+    Serial.println("Calibration finished");
 }
 
 void MPU6050::update()
@@ -90,7 +113,7 @@ void MPU6050::update()
     // Serial.print("     ");
     // Serial.println(angle_roll_buffer);
 
-    delay(4);
+    // delay(4);
     // while(micros() - loop_timer < 4000);                                 //Wait until the loop_timer reaches 4000us (250Hz) before starting the next loop
     // loop_timer = micros();                                               //Reset the loop timer
 }
