@@ -1,53 +1,26 @@
 
-#include "ODriveArduino.h"
+#include <Arduino.h>
+
+#include "odrive.h"
+#include "imu.h"
 #define DBG
 
-#include <Arduino.h>
-#include <SoftwareSerial.h>
-
-// Printing with stream operator helper functions
-template <class T>
-inline Print &operator<<(Print &obj, T arg)
-{
-    obj.print(arg);
-    return obj;
-}
-template <>
-inline Print &operator<<(Print &obj, float arg)
-{
-    obj.print(arg, 4);
-    return obj;
-}
-
-// Arduino without spare serial ports (such as Arduino UNO) have to use software serial.
-// Note that this is implemented poorly and can lead to wrong data sent or read.
-// pin 8: RX - connect to ODrive TX
-// pin 9: TX - connect to ODrive RX
-SoftwareSerial odrive_serial(8, 9);
-
-ODriveArduino odrive(odrive_serial);
+ODrive odrv;
+MPU6050 imu;
 
 void setup()
 {
-    // ODrive uses 115200 baud
-    odrive_serial.begin(115200);
-
     #ifdef DBG
-    // Serial to PC
     Serial.begin(115200);
     #endif
 
-    for (int axis = 0; axis < 2; ++axis)
-    {
-        odrive_serial << "w axis" << axis << ".controller.config.vel_limit " << 10.0F << '\n';
-        odrive_serial << "w axis" << axis << ".motor.config.current_lim " << 11.0F << '\n';
-        // This ends up writing something like "w axis0.motor.config.current_lim 10.0\n"
-    }
+    odrv.initialize();
+    imu.initialize();
 }
 
 void loop()
 {
-    delay(1000);
-    odrive_serial << "v 0 1\n";
 
+    imu.update();
+    odrv.writeVel(1);    
 }

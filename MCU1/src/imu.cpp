@@ -15,7 +15,6 @@ MPU6050::~MPU6050(){
 void MPU6050::initialize()
 {
     Wire.begin(); // Start I2C as master
-    Serial.begin(57600);
     pinMode(LED_BUILTIN, OUTPUT);
 
     setup_mpu_6050_registers(); // Setup the registers of the MPU-6050 (500dfs / +/-8g) and start the gyro
