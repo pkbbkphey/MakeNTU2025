@@ -3,6 +3,14 @@
 #include "ODriveArduino.h"
 #include <SoftwareSerial.h>
 
+// Arduino without spare serial ports (such as Arduino UNO) have to use software serial.
+// Note that this is implemented poorly and can lead to wrong data sent or read.
+// pin 8: RX - connect to ODrive TX
+// pin 9: TX - connect to ODrive RX
+SoftwareSerial odrive_serial(8, 9);
+
+ODriveArduino odrive(odrive_serial);
+
 ODrive::ODrive()
 {
 

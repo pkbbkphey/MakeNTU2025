@@ -22,9 +22,9 @@ void MPU6050::initialize()
     digitalWrite(LED_BUILTIN, HIGH);
 
     delay(1500);
-    #ifdef DBG
+
     Serial.println("Calibrating gyro");
-    #endif
+
     for (int cal_int = 0; cal_int < 2000; cal_int++)
     {
         read_mpu_6050_data(); // Read the raw acc and gyro data from the MPU-6050
@@ -86,9 +86,9 @@ void MPU6050::update()
 
     angle_pitch_buffer = angle_pitch_output * 10 - 6;
     angle_roll_buffer = angle_roll_output * 10 + 53; //(6, -53)
-    Serial.print(angle_pitch_buffer);
-    Serial.print("     ");
-    Serial.println(angle_roll_buffer);
+    // Serial.print(angle_pitch_buffer);
+    // Serial.print("     ");
+    // Serial.println(angle_roll_buffer);
 
     delay(4);
     // while(micros() - loop_timer < 4000);                                 //Wait until the loop_timer reaches 4000us (250Hz) before starting the next loop

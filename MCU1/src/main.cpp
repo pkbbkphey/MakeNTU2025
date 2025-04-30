@@ -1,18 +1,19 @@
 
 #include <Arduino.h>
 
-#define DBG
+const bool DBG = 1;
 #include "odrive.h"
 #include "imu.h"
+#include "balance_controller.h"
 
 ODrive odrv;
 MPU6050 imu;
+balance_controller controller1;
 
 void setup()
 {
-    #ifdef DBG
+    if(DBG)
     Serial.begin(115200);
-    #endif
 
     odrv.initialize();
     imu.initialize();
@@ -21,6 +22,6 @@ void setup()
 void loop()
 {
     imu.update();
-
-    odrv.writeVel(1);    
+    float vel_out = controller1.balance_control(imu.angle_roll_buffer, micros());
+    odrv.writeVel(vel_out);
 }
