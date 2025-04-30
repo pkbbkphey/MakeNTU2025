@@ -1,9 +1,9 @@
 
 #include <Arduino.h>
 
+#define DBG
 #include "odrive.h"
 #include "imu.h"
-#define DBG
 
 ODrive odrv;
 MPU6050 imu;
@@ -20,7 +20,7 @@ void setup()
 
 void loop()
 {
-
     imu.update();
+
     odrv.writeVel(1);    
 }

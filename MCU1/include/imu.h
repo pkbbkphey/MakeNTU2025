@@ -13,8 +13,6 @@ class MPU6050
         long acc_x, acc_y, acc_z, acc_total_vector;
         int temperature;
         long gyro_x_cal, gyro_y_cal, gyro_z_cal;
-        long loop_timer;
-        int lcd_loop_counter;
         float angle_pitch, angle_roll;
         int angle_pitch_buffer, angle_roll_buffer;
         bool set_gyro_angles;

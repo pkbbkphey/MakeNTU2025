@@ -22,7 +22,9 @@ void MPU6050::initialize()
     digitalWrite(LED_BUILTIN, HIGH);
 
     delay(1500);
+    #ifdef DBG
     Serial.println("Calibrating gyro");
+    #endif
     for (int cal_int = 0; cal_int < 2000; cal_int++)
     {
         read_mpu_6050_data(); // Read the raw acc and gyro data from the MPU-6050
@@ -37,7 +39,6 @@ void MPU6050::initialize()
 
     digitalWrite(LED_BUILTIN, LOW);
 
-    loop_timer = micros(); // Reset the loop timer
 }
 
 void MPU6050::update()
