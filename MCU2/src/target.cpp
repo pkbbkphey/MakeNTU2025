@@ -42,7 +42,7 @@ void Target::communicate()
     // From ESP32-CAM to PC
     digitalWrite(LED_BUILTIN, LOW);
     int sz = 0;
-    while (espSerial.available())
+    while (espSerial.available() > 0)
     {
         digitalWrite(LED_BUILTIN, HIGH);
         unsigned int c = espSerial.read();
@@ -54,6 +54,7 @@ void Target::communicate()
             parse(input_string, sz);
             input_string = "";
             sz = 0;
+            break;
         }
     }
 
