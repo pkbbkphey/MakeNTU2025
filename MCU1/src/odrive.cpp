@@ -42,7 +42,7 @@ void ODrive::writeVel(float velocity)
 
 float ODrive::readVel()
 {
-    
+    odrive_serial.
 }
 
 void test()
