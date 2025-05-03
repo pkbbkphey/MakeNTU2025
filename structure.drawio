@@ -7,7 +7,7 @@
         <mxCell id="_2ZUYXqsGlizadcUjon--12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-4" target="6xTB0geZAMP3oWDiHn3o-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6xTB0geZAMP3oWDiHn3o-4" value="ESP32" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="6xTB0geZAMP3oWDiHn3o-4" value="ESP32&lt;div&gt;(影像辨識)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="50" y="130" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_2ZUYXqsGlizadcUjon--9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-13" target="_2ZUYXqsGlizadcUjon--7">
@@ -93,7 +93,7 @@
         <mxCell id="kzeSojfKPxdmuSyKESCV-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2dbZt5oQCGfKPc3aetz3-8" target="2dbZt5oQCGfKPc3aetz3-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2dbZt5oQCGfKPc3aetz3-8" value="Arduino nano" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="2dbZt5oQCGfKPc3aetz3-8" value="&lt;div&gt;MCU1&lt;/div&gt;Arduino nano" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="380" y="100" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="6pNafbM-Ww48p6pXyY5f-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="2dbZt5oQCGfKPc3aetz3-9" target="CG3f3aGAEcLk8oi-hIqq-2" edge="1">
