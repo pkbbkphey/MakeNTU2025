@@ -26,6 +26,7 @@ class ODrive
         ~ODrive();
         void initialize();
         void writeVel(float velocity);
+        float readVel();
     private:
 };
 

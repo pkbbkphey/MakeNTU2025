@@ -40,6 +40,11 @@ void ODrive::writeVel(float velocity)
     odrive_serial << "v 0 " << String(velocity) << "\n";
 }
 
+float ODrive::readVel()
+{
+    
+}
+
 void test()
 {
     Serial.println(odrive.getVelocity(0));

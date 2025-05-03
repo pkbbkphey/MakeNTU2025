@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "target.h"
+#include "gimbal.h"
 #include "bike.h"
 #define int long long
 #define PIN_ServoPWM
@@ -9,18 +10,20 @@
 
 const int INF = 9e18;
 Bike bike;
+Gimbal gimbal;
 Target target;
 
 void setup()
 {
     Serial.begin(115200);
-    bike.initialize();
     target.initialize();
+    gimbal.initialize();
+    bike.initialize();
 }
 
 void loop()
 {
     target.communicate();
-    bike.upadate(target);
-    
+    // gimbal.update(target);
+    // bike.upadate(target);
 }
