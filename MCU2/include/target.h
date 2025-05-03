@@ -7,7 +7,8 @@ class Target
     public:
         int x, y;
         int distance;
-        
+        void initialize();
+        void communicate();
 };
 
 #endif

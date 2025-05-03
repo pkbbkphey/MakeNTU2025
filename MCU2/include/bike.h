@@ -2,14 +2,17 @@
 #ifndef __BIKE_H__
 #define __BIKE_H__
 
-class bike{
-public:
-    int angle;
-    int speed;
-    bike() : angle(0), speed(0){};
-    void turn(Target);
-    void move(Target);
-    void fit();
+class Bike{
+    public:
+        int angle;
+        int speed;
+        Bike() : angle(0), speed(0){};
+        void initialize();
+        void upadate(Target);
+    private:
+        void turn(Target);
+        void move(Target);
+        void fit();
 };
 
 #endif
