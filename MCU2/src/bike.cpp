@@ -6,9 +6,12 @@
 #include "target.h"
 #include "gimbal.h"
 
+#define Kp 0.3
+
 const int MAX_ANGLE = 90, MIN_ANGLE = -90;
 const int MAX_SPEED = 100, MIN_SPEED = 0;
 const int RESERVED_TIME = 2;// time for the bike to collide with static tracing object
+const int DESIRED_DISTANCE = 2500; // in mm
 const int GATE_DISTANCE_VALUE = 9e18;
 
 Servo Esc;
@@ -16,7 +19,7 @@ AccelStepper STEPPER1(1, 11, 10);
 
 void Bike::initialize()
 {
-    Esc.attach(9);
+    Esc.attach(6);
     
     STEPPER1.setEnablePin(12);
     STEPPER1.setMaxSpeed(1000);
@@ -30,7 +33,7 @@ void Bike::upadate(Target tar)
 {
     turn(tar);
     move(tar);
-    Esc.write(speed);
+    Esc.write(map(speed, 0, 100, 90, 100));
     STEPPER1.moveTo(angle);
     STEPPER1.run();
 }
@@ -54,7 +57,7 @@ void Bike::move(Target tar){
     if(distance > GATE_DISTANCE_VALUE){
         // lost(); // TODO
     }
-    double new_speed = distance / RESERVED_TIME;
+    double new_speed = (distance - DESIRED_DISTANCE) * Kp;
     speed = new_speed;
     fit();
 }

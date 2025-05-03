@@ -25,5 +25,5 @@ void loop()
 {
     target.communicate();
     // gimbal.update(target);
-    // bike.upadate(target);
+    bike.upadate(target);
 }

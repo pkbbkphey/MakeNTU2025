@@ -42,7 +42,13 @@ void ODrive::writeVel(float velocity)
 
 float ODrive::readVel()
 {
-    odrive_serial.
+    odrive_serial.println("f 0");
+    String in = odrive_serial.readStringUntil('\n');
+    float pos, vel;
+    for(int i = 0; i < in.length(); ++i)
+    {
+        
+    }
 }
 
 void test()
