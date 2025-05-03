@@ -29,4 +29,6 @@ class ODrive
     private:
 };
 
+void test();
+
 #endif

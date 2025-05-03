@@ -36,5 +36,12 @@ void ODrive::initialize()
 void ODrive::writeVel(float velocity)
 {
     // odrive_serial << "v 0 1\n";
-    odrive_serial << "v 0 " << String(velocity) << " 1\n";
+    // odrive_serial << "v 0 " << String(velocity) << " 1\n";
+    odrive_serial << "v 0 " << String(velocity) << "\n";
+}
+
+void test()
+{
+    Serial.println(odrive.getVelocity(0));
+    delay(100);
 }

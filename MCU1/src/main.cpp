@@ -7,9 +7,9 @@
 
 ODrive odrv;
 MPU6050 imu;
-balance_controller controller1;
+balance_controller controller1; 
 
-void setup()
+void setup()    
 {
     Serial.begin(115200);
 
@@ -20,7 +20,9 @@ void setup()
 
 void loop()
 {
-    imu.update();
-    float vel_out = controller1.balance_control(imu.angle_roll_buffer, micros());
-    odrv.writeVel(vel_out);
+    // imu.update();
+    // float vel_out = controller1.balance_control(imu.angle_roll_buffer, micros());
+    // odrv.writeVel( - vel_out);
+    Serial.println("hi1");
+    test();
 }
