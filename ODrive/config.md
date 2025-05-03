@@ -30,7 +30,7 @@ odrv0.axis0.controller.config.control_mode = CONTROL_MODE_VELOCITY_CONTROL
 odrv0.axis0.controller.input_vel = 0          // 指定轉速，單位rps
 ```
 
-### 啟動程序：
+# 啟動程序：
 ```
 odrv0.axis0.config.startup_motor_calibration = False            // 重新接UVW線才要重新執行
   - odrv0.axis0.motor.config.pre_calibrated = True              // 常態設定(不要動)
@@ -48,8 +48,8 @@ odrv0.axis0.config.startup_closed_loop_control = True
 # axis0:
 ### 安全：
 ```
-odrv0.axis0.motor.config.current_lim = 10
-odrv0.axis0.controller.config.vel_limit = 2          // velocity limit, rps
+odrv0.axis0.motor.config.current_lim = 30
+odrv0.axis0.controller.config.vel_limit = 20         // velocity limit, rps
 odrv0.axis0.motor.config.calibration_current = 10    // 靜止時的電流
 ```
 
@@ -83,11 +83,17 @@ odrv0.axis0.controller.config.pos_gain = 20.0
 odrv0.axis0.controller.config.vel_gain = 0.1666666716337204
 odrv0.axis0.controller.config.vel_integrator_gain = 0.3333333432674408
 ```
-#### Tuned for 9020 BLDC motor @Vin = 15V:
+#### Tuned for 9020 BLDC motor (空載) @Vin = 15V:
 ```
 odrv0.axis0.controller.config.pos_gain = 150
 odrv0.axis0.controller.config.vel_gain = 0.24
 odrv0.axis0.controller.config.vel_integrator_gain = 1    // 0.5 * bandwidth * vel_gain, bandwidth = 1/100ms
+```
+#### Tuned for 9020 BLDC motor (reaction wheel負載) @Vin = 15V:
+```
+odrv0.axis0.controller.config.pos_gain = 12.5
+odrv0.axis0.controller.config.vel_gain = 1.8
+odrv0.axis0.controller.config.vel_integrator_gain = 9    // 0.5 * bandwidth * vel_gain, bandwidth = 1/100ms
 ```
 
 # 通訊(UART)
