@@ -7,8 +7,9 @@ public:
     int angle;
     int speed;
     bike() : angle(0), speed(0){};
-    void turn();
-    void move();
+    void turn(Target);
+    void move(Target);
+    void fit();
 };
 
 #endif
