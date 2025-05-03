@@ -42,9 +42,11 @@ void Target::communicate()
     // From ESP32-CAM to PC
     digitalWrite(LED_BUILTIN, LOW);
     int sz = 0;
+    Serial.println("GOESIN");
     while (espSerial.available() > 0)
     {
         digitalWrite(LED_BUILTIN, HIGH);
+        Serial.println(espSerial.read());
         char c = espSerial.read();
         sz++;
         input_string += c;
