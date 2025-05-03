@@ -45,7 +45,7 @@ void Target::communicate()
     while (espSerial.available() > 0)
     {
         digitalWrite(LED_BUILTIN, HIGH);
-        unsigned int c = espSerial.read();
+        char c = espSerial.read();
         sz++;
         input_string += c;
         Serial.println(c);
