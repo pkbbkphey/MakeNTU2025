@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "target.h"
+#include "lidar.h"
 #ifndef __BIKE_H__
 #define __BIKE_H__
 
@@ -9,10 +9,10 @@ class Bike{
         int speed;
         Bike() : angle(0), speed(0){};
         void initialize();
-        void upadate(Target);
+        void update(Lidar);
     private:
-        void turn(Target);
-        void move(Target);
+    //     void turn(Target);
+        void move(Lidar);
         void fit();
 };
 
