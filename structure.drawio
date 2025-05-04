@@ -1,19 +1,19 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.14" pages="3">
   <diagram name="Overview" id="IaT-dQrcjwcjiGSIGe-s">
-    <mxGraphModel dx="5664" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+    <mxGraphModel dx="5336" dy="387" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_2ZUYXqsGlizadcUjon--12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-4" target="6xTB0geZAMP3oWDiHn3o-13">
+        <mxCell id="_2ZUYXqsGlizadcUjon--12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="6xTB0geZAMP3oWDiHn3o-4" target="6xTB0geZAMP3oWDiHn3o-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6xTB0geZAMP3oWDiHn3o-4" value="ESP32&lt;div&gt;(影像辨識)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="50" y="130" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="190" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-13" target="_2ZUYXqsGlizadcUjon--7">
+        <mxCell id="_2ZUYXqsGlizadcUjon--9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6xTB0geZAMP3oWDiHn3o-13" target="_2ZUYXqsGlizadcUjon--7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6xTB0geZAMP3oWDiHn3o-13" target="_2ZUYXqsGlizadcUjon--10">
+        <mxCell id="_2ZUYXqsGlizadcUjon--11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6xTB0geZAMP3oWDiHn3o-13" target="_2ZUYXqsGlizadcUjon--10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6xTB0geZAMP3oWDiHn3o-13" value="&lt;div&gt;MCU2&lt;/div&gt;Arduino nano" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -23,34 +23,34 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6xTB0geZAMP3oWDiHn3o-21" value="Camera" style="ellipse;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="-130" y="130" width="100" height="60" as="geometry" />
+          <mxGeometry x="-100" y="190" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--6" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_2ZUYXqsGlizadcUjon--1" target="_2ZUYXqsGlizadcUjon--4">
+        <mxCell id="_2ZUYXqsGlizadcUjon--6" style="edgeStyle=orthogonalEdgeStyle;shape=link;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_2ZUYXqsGlizadcUjon--1" target="_2ZUYXqsGlizadcUjon--4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--1" value="&lt;div&gt;MCU1&lt;/div&gt;Arduino nano" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="510" width="120" height="60" as="geometry" />
+        <mxCell id="_2ZUYXqsGlizadcUjon--1" value="&lt;div&gt;MCU1&lt;/div&gt;Arduino nano" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="460" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_2ZUYXqsGlizadcUjon--2" target="_2ZUYXqsGlizadcUjon--1">
+        <mxCell id="_2ZUYXqsGlizadcUjon--3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_2ZUYXqsGlizadcUjon--2" target="_2ZUYXqsGlizadcUjon--1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--2" value="&lt;div&gt;MPU6050&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-130" y="510" width="120" height="60" as="geometry" />
+        <mxCell id="_2ZUYXqsGlizadcUjon--2" value="&lt;div&gt;MPU6050&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-110" y="460" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--4" value="&lt;div&gt;ODrive&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="510" width="120" height="60" as="geometry" />
+        <mxCell id="_2ZUYXqsGlizadcUjon--4" value="&lt;div&gt;ODrive&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="460" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--7" value="Servo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="290" width="120" height="60" as="geometry" />
+        <mxCell id="_2ZUYXqsGlizadcUjon--7" value="Servo" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="290" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--10" value="ESC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="380" width="120" height="60" as="geometry" />
+        <mxCell id="_2ZUYXqsGlizadcUjon--10" value="ESC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="370" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_2ZUYXqsGlizadcUjon--13" target="6xTB0geZAMP3oWDiHn3o-13">
+        <mxCell id="_2ZUYXqsGlizadcUjon--14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_2ZUYXqsGlizadcUjon--13" target="6xTB0geZAMP3oWDiHn3o-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_2ZUYXqsGlizadcUjon--13" value="TOF" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-140" y="290" width="120" height="60" as="geometry" />
+        <mxCell id="_2ZUYXqsGlizadcUjon--13" value="TOF" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-110" y="290" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
