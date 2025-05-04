@@ -38,8 +38,8 @@ void Lidar::update(){
     int newPos = pos + dir;
     if(newPos < 0 || newPos >= N) dir *= -1;
     pos += dir;
-    int angle = map(pos, 0, N-1, LIDAR_ANG_MIN, LIDAR_ANG_MAX);
-    Servo1.write(angle); // maybe cache last angle to avoid repeat?
+    // int angle = map(pos, 0, N-1, LIDAR_ANG_MIN, LIDAR_ANG_MAX);
+    // Servo1.write(angle); // maybe cache last angle to avoid repeat?
 
     distance[pos] = map(analogRead(A0), 0, 1023, 5500, 0);
 }

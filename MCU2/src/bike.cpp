@@ -5,6 +5,7 @@
 #include "parameters.h"
 #include "lidar.h"
 #include "bike.h"
+#include "control.cpp"
 
 #define Kp 0.3
 
@@ -16,6 +17,7 @@ const int RESERVED_TIME = 2;// time for the bike to collide with static tracing 
 
 Servo Esc;
 AccelStepper STEPPER1(1, 11, 10);
+CTL ctl;
 
 void Bike::initialize()
 {
@@ -34,6 +36,7 @@ void Bike::update(Lidar lidar)
     // turn(tar);
     move(lidar);
     Esc.write(map(speed, 0, 100, 90, 100));
+    int new_angle = map(ctl.control(), 0, 1023, 0, 100)
     STEPPER1.moveTo(angle);
     STEPPER1.run();
 }
