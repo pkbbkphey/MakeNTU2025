@@ -23,8 +23,8 @@ class balance_controller {
         float balance_control(const float angle_roll, unsigned long sys_time);
     
     private:
-        const float Kp = 6;        // Proportional gain for angle
-        const float Kd = 1;       // Derivative gain for angle velocity
+        const float Kp = 80;        // Proportional gain for angle
+        const float Kd = 10;       // Derivative gain for angle velocity
         // const float Ki_bias = 0.1;  // Learning rate for upright offset
         const float friction = 0.05;  // Damping/friction to reduce wheel speed near upright
     

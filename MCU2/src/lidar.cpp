@@ -3,8 +3,10 @@
 #include <Servo.h>
 #include "lidar.h"
 #include "parameters.h"
+#include "control.cpp"
 
 Servo Servo1;
+CTL ctl2;
 
 void Lidar::initialize(){
     Servo1.attach(5);
@@ -40,6 +42,7 @@ void Lidar::update(){
     pos += dir;
     // int angle = map(pos, 0, N-1, LIDAR_ANG_MIN, LIDAR_ANG_MAX);
     // Servo1.write(angle); // maybe cache last angle to avoid repeat?
-
+    int angle = map(ctl2.control(), 0, 1023, LIDAR_ANG_MIN, LIDAR_ANG_MAX);
+    Servo1.write(angle);
     distance[pos] = map(analogRead(A0), 0, 1023, 5500, 0);
 }

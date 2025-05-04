@@ -36,8 +36,8 @@ void Bike::update(Lidar lidar)
     // turn(tar);
     move(lidar);
     Esc.write(map(speed, 0, 100, 90, 100));
-    int new_angle = map(ctl.control(), 0, 1023, 0, 100)
-    STEPPER1.moveTo(angle);
+    int new_angle = map(ctl.control(), 0, 1023, 0, 100);
+    STEPPER1.moveTo(new_angle);
     STEPPER1.run();
 }
 

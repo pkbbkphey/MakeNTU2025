@@ -22,7 +22,7 @@ void loop()
 {
     imu.update();
     float vel_out = controller1.balance_control(imu.angle_roll_buffer, micros());
-    odrv.writeVel( - vel_out);
+    odrv.writeVel(vel_out);
     // Serial.println("hi1");
     // test();
 }
