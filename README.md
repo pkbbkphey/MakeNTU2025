@@ -6,7 +6,7 @@
 
 # 作品架構 [Project Structure](https://app.diagrams.net/#Hpkbbkphey%2FMakeNTU2025%2Fmain%2Fstructure.drawio#%7B%22pageId%22%3A%22IaT-dQrcjwcjiGSIGe-s%22%7D)
 - 人像追蹤： 
-本系統整合影像辨識與感測技術，透過Pixy影像辨識模組進行人像追蹤，搭配裝設於伺服馬達上的ToF測距儀，即時掌握使用者相對位置
+本系統整合影像辨識與感測技術，透過ESP32進行人像追蹤，搭配裝設於伺服馬達上的ToF測距儀，即時掌握使用者相對位置
 - 車體自動平衡：
 車體平衡以無刷馬達與驅動器組成的Reaction Wheel，結合陀螺儀與加速度計實現主動平衡控制。
 - 自動跟隨：
